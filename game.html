@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>答題小遊戲</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="start-container">
+        <h1>答題小遊戲</h1>
+        <button onclick="startGame()">開始遊戲</button>
+    </div>
+
+    <div id="quiz-container" style="display: none;">
+        <div id="question"></div>
+        <div class="spacer"></div>
+        <div id="options" class="options-container"></div>
+        <div class="spacer"></div>
+        <button id="submitBtn" onclick="checkAnswer()">提交答案</button>
+        <p id="result"></p>
+        <button id="nextBtn" onclick="nextQuestion()" style="display: none;">進入下一題</button>
+    </div>
+
+    <div id="result-container" style="display: none;">
+        <h1>恭喜你完成啦！</h1>
+        <p id="score"></p>
+        <button onclick="restartGame()">重新開始</button>
+        <button onclick="goToHome()">回到首頁</button> <!-- 新增這一行 -->
+    </div>
+
+    <script src="questions.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
